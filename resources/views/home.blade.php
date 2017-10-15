@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no;">
-    <title>Shivam Bansal</title>
+    <title>{{$basic_profile->first_name}} {{$basic_profile->last_name}}</title>
 
     <!--( a ) Fav Icon -->
 
@@ -72,8 +72,8 @@
         </div>
         <div class="intro-content">
             <h1>HELLO<br>
-                I'M <span>JOHN</span> DOE</h1>
-            <h2>GRAPHIC DESIGNER</h2>
+                I'M <span>{{$basic_profile->first_name}}</span> {{$basic_profile->last_name}}</h1>
+            <h2>{{$basic_profile->designation}}</h2>
             <p class="social-media hidden-xs">
                 <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
                 <a href="#" class="fa fa-twitter" data-toggle="tooltip" title="Twitter"></a>
