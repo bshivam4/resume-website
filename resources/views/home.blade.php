@@ -300,9 +300,9 @@
         <!--( D ) Footer -->
 
         <div class="footer clearfix">
-            <a href="#">JOHN DOE</a>
+            <a href="#">{{$basic_profile->first_name}} {{$basic_profile->last_name}}</a>
             <p>
-                Copyright © 2015 All right reserved
+                Copyright © 2017 All right reserved
             </p>
         </div>
     </div>
@@ -334,44 +334,30 @@
             <h2 class="small-heading">EDUCATION</h2>
 
             <div class="education-container col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
-                <div class="item">
-                    <div class="bullet hidden-xs">
-                    </div>
-                    <div class="education-content">
-                        <h3>University of Graphics<span> / October 2013 - March 2015</span></h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et pulvinar ligula. Praesent maximus ornare quam, id consectetur dui eleifend nec. Nam consectetur orci id nulla varius, quis facilisis dui vulputate. Sed ultrices eu erat non mollis. Phasellus ut libero.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Single Education Item [ END ] -->
+                @foreach($educations as $education)
 
-                <div class="item">
-                    <div class="bullet hidden-xs">
-                    </div>
-                    <div class="education-content">
-                        <h3>University of Graphics<span> / October 2011 - March 2013</span></h3>
-                        <p>
-                            In eu semper velit. Ut laoreet, sapien ac porta aliquam, est enim blandit nisl, ut semper dui justo a sapien. Nam orci ipsum, rutrum semper purus a, posuere molestie lorem. Sed ut nibh lobortis, semper ligula ut, tempus mi. In.
-                        </p>
-                    </div>
-                </div>
+                    <div class="item">
+                        <div class="bullet hidden-xs">
+                        </div>
+                        <div class="education-content">
+                            <h3>{{$education->degree}}</h3>
 
-                <!-- Single Education Item [ END ] -->
+                                <p>
 
-                <div class="item">
-                    <div class="bullet hidden-xs">
-                    </div>
-                    <div class="education-content">
-                        <h3>University of Graphics<span> / October 2009 - March 2011</span></h3>
-                        <p>
-                            Maecenas hendrerit euismod lorem, vitae mollis odio consectetur a. Aliquam at viverra nunc. Fusce neque lectus, vehicula eget lectus ac, consequat mollis erat. Sed sed interdum nisl. Nulla maximus odio vitae turpis rhoncus tempus. Donec vel elit quis metus rutrum.
-                        </p>
-                    </div>
-                </div>
+                                    <span class="glyphicon glyphicon-home"></span> &nbsp&nbsp {{$education->institute}}
+                                    <br><br>
+                                    <span class="glyphicon glyphicon-calendar"></span> &nbsp&nbsp {{$education->year}}
+                                    <br><br>
+                                    <span class="glyphicon glyphicon-education"></span>&nbsp&nbsp {{$education->percentage}}
+                                </p>
 
-                <!-- Single Education Item [ END ] -->
+                        </div>
+                    </div>
+
+                @endforeach
+
+
 
             </div>
         </div>
@@ -385,7 +371,7 @@
                     <div class="bullet hidden-xs">
                     </div>
                     <div class="experience-content">
-                        <h3>Senior Web Designer<span> / October 2013 - March 2015<br>
+                        <h3>Senior Web Designer<span> / October 2013 - March 2017<br>
                             Lorem Ipsum, Inc.</span></h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et pulvinar ligula. Praesent maximus ornare quam, id consectetur dui eleifend nec. Nam consectetur orci id nulla varius, quis facilisis dui vulputate. Sed ultrices eu erat non mollis. Phasellus ut libero.
@@ -491,9 +477,9 @@
         <!--( C ) Footer Section -->
 
         <div class="footer clearfix">
-            <a href="#">JOHN DOE</a>
+            <a href="#">{{$basic_profile->first_name}} {{$basic_profile->last_name}}</a>
             <p>
-                Copyright © 2015 All right reserved
+                Copyright © 2017 All right reserved
             </p>
         </div>
     </div>
@@ -885,7 +871,7 @@
                         <p>
                             <i class="fa fa-quote-left"></i>Etiam sollicitudin ornare pulvinar. Nullam a vulputate lectus. Maecenas a nisl leo. Curabitur ante nisi, pellentesque et turpis eget, iaculis porta lorem. Aenean in justo nec turpis maximus.<i class="fa fa-quote-right"></i>
                         </p>
-                        <h3>John Doe</h3>
+                        <h3>{{$basic_profile->first_name}} {{$basic_profile->last_name}}</h3>
                     </div>
 
                     <!-- Single Testimonial Item [ END ] -->
@@ -914,9 +900,9 @@
         <!-- Footer -->
 
         <div class="footer clearfix">
-            <a href="#">JOHN DOE</a>
+            <a href="#">{{$basic_profile->first_name}} {{$basic_profile->last_name}}</a>
             <p>
-                Copyright © 2015 All right reserved
+                Copyright © 2017 All right reserved
             </p>
         </div>
     </div>
@@ -1072,9 +1058,9 @@
         <!-- ( D ) Footer -->
 
         <div class="footer clearfix">
-            <a href="#">JOHN DOE</a>
+            <a href="#">{{$basic_profile->first_name}} {{$basic_profile->last_name}}</a>
             <p>
-                Copyright © 2015 All right reserved
+                Copyright © 2017 All right reserved
             </p>
         </div>
     </div>

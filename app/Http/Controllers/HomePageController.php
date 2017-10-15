@@ -11,6 +11,6 @@ class HomePageController extends Controller
     public function index(){
         $basic_profile=BasicProfile::first();
         $educations=Education::get();
-        return view('home',compact('basic_profile'));
+        return view('home',compact('basic_profile','educations'));
     }
 }
