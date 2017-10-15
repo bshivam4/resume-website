@@ -18,9 +18,9 @@ class CreateBasicProfilesTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('designation');
-            $table->string('facebook_url');
-            $table->string('linkedin_url');
-            $table->string('googleplus_url');
+            $table->string('facebook_url')->nullable();
+            $table->string('linkedin_url')->nullable();
+            $table->string('googleplus_url')->nullable();
             $table->timestamps();
         });
     }
