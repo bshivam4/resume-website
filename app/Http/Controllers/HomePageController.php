@@ -12,7 +12,7 @@ class HomePageController extends Controller
     public function index(){
         $basic_profile=BasicProfile::first();
         $educations=Education::get();
-        $experiences=Experience::get();
-        return view('home',compact('basic_profile','educations'));
+        $experiences=Experience::orderBy('serial','desc')->get();
+        return view('home',compact('basic_profile','educations','experiences'));
     }
 }

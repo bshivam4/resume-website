@@ -1,21 +1,6 @@
 /*
 --------------------------------------------------------* 
 
-[INSTA, Main Stylesheet ]
-
-    Color        : RED ( #00B6F9 )
-
-    Name         : INSTA - Responsive Onepage Resume Template
-
-    Version      :  1.0 
-
-    Author       :  Pixel_Factory
-
-    Author URI   :  http://themeforest.net/user/Pixel_Factory
-
-    Author Email : h.nafees.anwar@gmail.com
-
-
 --------------------------------------------------------
 
 --------------------------------------------------------
@@ -377,6 +362,7 @@ body {
     margin-top: 50px;
 }
 
+
 .social-media a {
     color: #fff;
     text-decoration: none;
@@ -426,6 +412,8 @@ body {
     -ms-transition: -ms-transform 1s linear;
     -o-transition: -o-transform 1s linear;
     transition: transform 1s linear;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 .menu > div:hover > img {
@@ -434,6 +422,7 @@ body {
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
+
 }
 
 .heading {

@@ -18,11 +18,11 @@ class CreateExperiencesTable extends Migration
             $table->string('designation');
             $table->string('organisation');
             $table->string('from');
-            $table->string('to');
-            $table->mediumText('description');
-            $table->mediumText('technology');
+            $table->string('to')->nullable();
+            $table->mediumText('description')->nullable();
+            $table->mediumText('technology')->nullable();
             $table->integer('serial');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 
 <!doctype html>
+
 <html lang="en" class="no-js">
 <head>
 
@@ -34,6 +35,34 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/responsive.css')}}">
 
+    <style>
+        .menu > div > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            -webkit-transition: -webkit-transform 1s linear;
+            -moz-transition: -moz-transform 1s linear;
+            -ms-transition: -ms-transform 1s linear;
+            -o-transition: -o-transform 1s linear;
+            transition: transform 1s linear;
+            -webkit-filter: grayscale(50%);
+            filter: grayscale(50%);
+        }
+
+        .menu > div:hover > img {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+
+        }
+    </style>
+
     <!--( c ) Javascript For Browser Support Issues -->
 
     <script type="text/javascript" src="{{ asset('library/modernizr/modernizr.js')}}"></script>
@@ -67,7 +96,7 @@
     <!--( a ) Introduction -->
 
     <div class="introduction">
-        <img alt="" src="{{ asset('images/home_dp.jpg')}}">
+        <img  alt="" src="{{ asset('images/home_dp.jpg')}}">
         <div class="mask">
         </div>
         <div class="intro-content">
@@ -110,7 +139,7 @@
         <!-- Single Navigation Menu Button [ END ]  -->
 
         <div class="resume-btn">
-            <img alt="" src="images/menu/resume_btn.jpg">
+            <img  alt="" src="images/menu/resume_btn.jpg">
             <div class="mask">
             </div>
             <div class="heading col-xs-11 col-xs-offset-1">
@@ -367,47 +396,25 @@
         <div class="experience clearfix">
             <h2 class="small-heading">EXPERIENCE</h2>
             <div class="experience-container col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
-                <div class="item">
-                    <div class="bullet hidden-xs">
-                    </div>
-                    <div class="experience-content">
-                        <h3>Senior Web Designer<span> / October 2013 - March 2017<br>
-                            Lorem Ipsum, Inc.</span></h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et pulvinar ligula. Praesent maximus ornare quam, id consectetur dui eleifend nec. Nam consectetur orci id nulla varius, quis facilisis dui vulputate. Sed ultrices eu erat non mollis. Phasellus ut libero.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Single Experience Item [ END ] -->
+                @foreach($experiences as $experience)
 
-                <div class="item">
-                    <div class="bullet hidden-xs">
+                    <div class="item">
+                        <div class="bullet hidden-xs">
+                        </div>
+                        <div class="experience-content">
+                            <h3>{{$experience->designation}}</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et pulvinar ligula. Praesent maximus ornare quam, id consectetur dui eleifend nec. Nam consectetur orci id nulla varius, quis facilisis dui vulputate. Sed ultrices eu erat non mollis. Phasellus ut libero.
+                            </p>
+                        </div>
                     </div>
-                    <div class="experience-content">
-                        <h3>Senior Web Designer<span> / October 2011 - March 2013<br>
-                            Lorem Ipsum, Inc.</span></h3>
-                        <p>
-                            In eu semper velit. Ut laoreet, sapien ac porta aliquam, est enim blandit nisl, ut semper dui justo a sapien. Nam orci ipsum, rutrum semper purus a, posuere molestie lorem. Sed ut nibh lobortis, semper ligula ut, tempus mi. In.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Single Experience Item [ END ] -->
+                @endforeach
 
-                <div class="item">
-                    <div class="bullet hidden-xs">
-                    </div>
-                    <div class="experience-content">
-                        <h3>Senior Web Designer<span> / October 2009 - March 2011<br>
-                            Lorem Ipsum, Inc.</span></h3>
-                        <p>
-                            Maecenas hendrerit euismod lorem, vitae mollis odio consectetur a. Aliquam at viverra nunc. Fusce neque lectus, vehicula eget lectus ac, consequat mollis erat. Sed sed interdum nisl. Nulla maximus odio vitae turpis rhoncus tempus. Donec vel elit quis metus rutrum.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Single Experience Item [ END ] -->
+
+
 
             </div>
         </div>
@@ -417,7 +424,7 @@
         <div class="skills clearfix">
             <h2 class="small-heading">SKILLS</h2>
             <div class="clearfix">
-                <div class="skill-container col-sm-4">
+                <div class="skill-container col-sm-3">
                     <h3>Photoshop</h3>
                     <div class="skill" data-percent="60">
                         <span>60%</span>
@@ -426,7 +433,7 @@
 
                 <!-- Single Skills Item [ END ] -->
 
-                <div class="skill-container col-sm-4">
+                <div class="skill-container col-sm-3">
                     <h3>Illustrator</h3>
                     <div class="skill" data-percent="65">
                         <span>65%</span>
@@ -435,7 +442,7 @@
 
                 <!-- Single Skills Item [ END ] -->
 
-                <div class="skill-container col-sm-4">
+                <div class="skill-container col-sm-3">
                     <h3>Dreamweaver</h3>
                     <div class="skill" data-percent="80">
                         <span>80%</span>
@@ -444,7 +451,7 @@
 
                 <!-- Single Skills Item [ END ] -->
 
-                <div class="skill-container col-sm-4">
+                <div class="skill-container col-sm-3">
                     <h3>Design</h3>
                     <div class="skill" data-percent="55">
                         <span>55%</span>
@@ -453,7 +460,7 @@
 
                 <!-- Single Skills Item [ END ] -->
 
-                <div class="skill-container col-sm-4">
+                <div class="skill-container col-sm-3">
                     <h3>Development</h3>
                     <div class="skill" data-percent="90">
                         <span>90%</span>
@@ -462,7 +469,14 @@
 
                 <!-- Single Skills Item [ END ] -->
 
-                <div class="skill-container col-sm-4">
+                <div class="skill-container col-sm-3">
+                    <h3>Coding</h3>
+                    <div class="skill" data-percent="85">
+                        <span>85%</span>
+                    </div>
+                </div>
+
+                <div class="skill-container col-sm-3">
                     <h3>Coding</h3>
                     <div class="skill" data-percent="85">
                         <span>85%</span>
@@ -930,64 +944,18 @@
 
         <!--( A ) Contact Form -->
 
-        <div>
-            <h2 class="small-heading">SAY HELLO!</h2>
 
-            <div class="contact-form col-sm-11 clearfix">
 
-                <form action="php/contact.php" id="contactForm" method="post" name="contactForm">
-                    <fieldset>
-                        <div class="col-sm-12">
-                            <input id="name" name="name" placeholder="Your Name*" type="text" value="">
-                        </div>
 
-                        <!-- Name Field [ END ] -->
 
-                        <div class="col-sm-12">
-                            <input id="email" name="email" placeholder="Your Email*" type="text" value="">
-                        </div>
 
-                        <!-- Email Field [ END ] -->
 
-                        <div class="col-xs-12">
-                            <textarea cols="5" id="message" name="message" placeholder="Your Message....*"></textarea>
-                        </div>
 
-                        <!-- Message Field [ END ] -->
+        <!--( B ) Contact Details -->
 
-                        <div class="col-xs-12">
-                            <button class="submit active">SEND</button>
-                        </div>
-
-                        <div class="error col-xs-12">
-                            <h3></h3>
-                        </div>
-
-                        <!-- Error Message [ END ] -->
-
-                        <div class="success col-xs-12">
-                            <h3>Success! Your message was sent.</h3>
-                        </div>
-
-                        <!-- Submit Button [ END ] -->
-
-                    </fieldset>
-                </form>
-
-                <!-- Contact Form [ END ] -->
-
-            </div>
-        </div>
-
-        <!--( B ) Google Map -->
-
-        <div class="google-map" id="google-map"></div>
-
-        <!--( C ) Contact Details -->
-
-        <div class="contact-details clearfix">
-            <h2 class="small-heading">CONTACT DETAILS</h2>
-            <div class="contact col-sm-4">
+        <div class="contact-details  clearfix">
+            <h2 class="small-heading footer">CONTACT DETAILS</h2>
+            <div class="contact col-sm-6">
                 <p>
                     <i class="fa fa-map-marker"></i><br>
                     121 King St, Melbourne VIC
@@ -996,7 +964,7 @@
 
             <!-- Single Contact Details Item [ END ] -->
 
-            <div class="contact col-sm-4">
+            <div class="contact col-sm-6">
                 <p>
                     <i class="fa fa-phone"></i><br>
                     +00 000 0000 000
@@ -1005,25 +973,9 @@
 
             <!-- Single Contact Details Item [ END ] -->
 
-            <div class="contact col-sm-4">
-                <p>
-                    <i class="fa fa-fax"></i><br>
-                    +00 000 0000 000
-                </p>
-            </div>
 
-            <!-- Single Contact Details Item [ END ] -->
 
-            <div class="contact col-sm-4">
-                <p>
-                    <i class="fa fa-phone"></i><br>
-                    +00 000 0000 000
-                </p>
-            </div>
-
-            <!-- Single Contact Details Item [ END ] -->
-
-            <div class="contact col-sm-4">
+            <div class="contact col-sm-6">
                 <p>
                     <i class="fa fa-envelope"></i><br>
                     dummy@example.com
@@ -1032,7 +984,7 @@
 
             <!-- Single Contact Details Item [ END ] -->
 
-            <div class="contact col-sm-4">
+            <div class="contact col-sm-6">
                 <p>
                     <i class="fa fa-globe"></i><br>
                     www.example.com
@@ -1054,6 +1006,10 @@
             <!-- Social Media Icons [ END ] -->
 
         </div>
+
+        <!--( C ) Google Map -->
+
+        <div class="google-map" id="google-map"></div>
 
         <!-- ( D ) Footer -->
 
