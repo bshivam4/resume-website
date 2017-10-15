@@ -67,7 +67,7 @@
     <!--( a ) Introduction -->
 
     <div class="introduction">
-        <img alt="" src="images/home_dp.jpg">
+        <img alt="" src="{{ asset('images/home_dp.jpg')}}">
         <div class="mask">
         </div>
         <div class="intro-content">
