@@ -104,13 +104,13 @@
                 I'M <span>{{$basic_profile->first_name}}</span> {{$basic_profile->last_name}}</h1>
             <h2>{{$basic_profile->designation}}</h2>
             <p class="social-media hidden-xs">
-                <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
-                <a href="#" class="fa fa-twitter" data-toggle="tooltip" title="Twitter"></a>
-                <a href="#" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
-                <a href="#" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
-                <a href="#" class="fa fa-behance" data-toggle="tooltip" title="Behance"></a>
-                <a href="#" class="fa fa-flickr" data-toggle="tooltip" title="Flicker"></a>
-                <a href="#" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
+
+                <a target="_blank" href="{{$basic_profile->linkedin_url}}" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
+                <a target="_blank" href="{{$basic_profile->github_url}}" class="fa fa-github" data-toggle="tooltip" title="Github"></a>
+                <a target="_blank" href="{{$basic_profile->googleplus_url}}" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
+                <a target="_blank" href="{{$basic_profile->quora_url}}" class="fa fa-quora" data-toggle="tooltip" title="Quora"></a>
+                <a target="_blank" href="{{$basic_profile->facebook_url}}" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
+                <a target="_blank" href="{{$basic_profile->insta_url}}" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
             </p>
 
             <!-- Social Media Icons [ END ] -->
@@ -954,20 +954,20 @@
         <!--( B ) Contact Details -->
 
         <div class="contact-details  clearfix">
-            <h2 class="small-heading footer">CONTACT DETAILS</h2>
-            <div class="contact col-sm-6">
+            <h2 class="small-heading">CONTACT DETAILS</h2>
+            <div class="contact col-sm-3">
                 <p>
                     <i class="fa fa-map-marker"></i><br>
-                    121 King St, Melbourne VIC
+                    {{$basic_profile->location}}
                 </p>
             </div>
 
             <!-- Single Contact Details Item [ END ] -->
 
-            <div class="contact col-sm-6">
+            <div class="contact col-sm-3">
                 <p>
                     <i class="fa fa-phone"></i><br>
-                    +00 000 0000 000
+                    {{$basic_profile->mobile}}
                 </p>
             </div>
 
@@ -975,33 +975,25 @@
 
 
 
-            <div class="contact col-sm-6">
+            <div class="contact col-sm-3">
                 <p>
                     <i class="fa fa-envelope"></i><br>
-                    dummy@example.com
+                    {{$basic_profile->email}}
                 </p>
             </div>
 
             <!-- Single Contact Details Item [ END ] -->
 
-            <div class="contact col-sm-6">
+            <div class="contact col-sm-3">
                 <p>
                     <i class="fa fa-globe"></i><br>
-                    www.example.com
+                    {{$basic_profile->website}}
                 </p>
             </div>
 
             <!-- Single Contact Details Item [ END ] -->
 
-            <div class="col-xs-12 social-media">
-                <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
-                <a href="#" class="fa fa-twitter" data-toggle="tooltip" title="Twitter"></a>
-                <a href="#" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
-                <a href="#" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
-                <a href="#" class="fa fa-behance" data-toggle="tooltip" title="Behance"></a>
-                <a href="#" class="fa fa-flickr" data-toggle="tooltip" title="Flicker"></a>
-                <a href="#" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
-            </div>
+
 
             <!-- Social Media Icons [ END ] -->
 
@@ -1009,12 +1001,28 @@
 
         <!--( C ) Google Map -->
 
-        <div class="google-map" id="google-map"></div>
+        <div style="height:500px;" class="google-map" id="google-map"></div>
+
+
+        <div class="contact-details  clearfix">
+            <div class="col-xs-12 social-media">
+
+                <a href="#" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
+                <a href="#" class="fa fa-github" data-toggle="tooltip" title="Github"></a>
+                <a href="#" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
+                <a href="#" class="fa fa-quora" data-toggle="tooltip" title="Quora"></a>
+                <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
+                <a href="#" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
+
+            </div>
+        </div>
+
+
 
         <!-- ( D ) Footer -->
 
         <div class="footer clearfix">
-            <a href="#">{{$basic_profile->first_name}} {{$basic_profile->last_name}}</a>
+            <a href="#">{{$basic_profile->first_name}}</a>
             <p>
                 Copyright © 2017 All right reserved
             </p>
