@@ -597,6 +597,9 @@ body {
 
 .story-content div p {
     text-indent: 25px;
+    font-size: 19px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .story-content div a {
