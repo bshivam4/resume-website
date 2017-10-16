@@ -22,14 +22,20 @@ class HomePageController extends Controller
         $skills=[];
         foreach ($skills_titles as $skills_title){
             $skills[$i]['title']=$skills_title->title;
+            $skills[$i]['serial']=$i;
 
             $sub_skills=Skill::where('title',$skills_title->title)->get();
             $j=0;
             foreach ($sub_skills as $sub_skill){
-                $skills[$i]['subtitle'][$j++]=$sub_skill->sub_title;
+                $skills[$i]['subtitle'][$j]['name']=$sub_skill->sub_title;
+                $skills[$i]['subtitle'][$j]['percentage']=$sub_skill->percentage;
+                $j++;
             }
             $i++;
         }
+        //return $skills;
+
+
 
         return view('home',compact('basic_profile','educations','experiences','specializations','skills'));
     }

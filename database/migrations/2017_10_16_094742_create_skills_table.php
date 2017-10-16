@@ -18,6 +18,7 @@ class CreateSkillsTable extends Migration
             $table->string('title');
             $table->string('sub_title');
             $table->string('icon')->nullable();
+            $table->integer('percentage')->nullable();
             $table->integer('serial')->nullable();
             $table->timestamps();
         });

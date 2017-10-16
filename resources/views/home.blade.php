@@ -406,74 +406,49 @@
             </div>
         </div>
 
+
+
         <!--( C ) Skills Section -->
 
-        <div class="skills clearfix">
-            <h2 class="small-heading">SKILLS</h2>
-            <div class="clearfix">
-                <div class="skill-container col-sm-3">
-                    <h3>Photoshop</h3>
-                    <div class="skill" data-percent="60">
-                        <span>60%</span>
-                    </div>
+        <div class="portfolio skills">
+            <h2 class="small-heading">TECHNICAL EXPERTISE</h2>
+            <div class="project-container skill-container">
+
+                <div class="project-controls">
+                    <button class="filter" data-filter="all">All</button>
+                    @foreach($skills as $skill)
+                        <button class="filter" data-filter=".{{$skill['serial']}}">{{$skill['title']}}</button>
+                    @endforeach
+
                 </div>
 
-                <!-- Single Skills Item [ END ] -->
+                <!-- Portfolio Control Buttons [ END ] -->
 
-                <div class="skill-container col-sm-3">
-                    <h3>Illustrator</h3>
-                    <div class="skill" data-percent="65">
-                        <span>65%</span>
-                    </div>
+                <div class="projet-items clearfix" id="projects">
+
+
+
+                    <!-- Portfolio Image -->
+
+                    @foreach($skills as $skill)
+                        @foreach($skill['subtitle'] as $subtitle)
+                            <div class="col-sm-3 mix {{$skill['serial']}}">
+                                    <div class="skill" data-percent="{{$subtitle['percentage']}}">
+                                        <span>{{$subtitle['name']}}</span>
+                                    </div>
+                            </div>
+                        @endforeach
+                    @endforeach
+
+
+
+
+
+
                 </div>
-
-                <!-- Single Skills Item [ END ] -->
-
-                <div class="skill-container col-sm-3">
-                    <h3>Dreamweaver</h3>
-                    <div class="skill" data-percent="80">
-                        <span>80%</span>
-                    </div>
-                </div>
-
-                <!-- Single Skills Item [ END ] -->
-
-                <div class="skill-container col-sm-3">
-                    <h3>Design</h3>
-                    <div class="skill" data-percent="55">
-                        <span>55%</span>
-                    </div>
-                </div>
-
-                <!-- Single Skills Item [ END ] -->
-
-                <div class="skill-container col-sm-3">
-                    <h3>Development</h3>
-                    <div class="skill" data-percent="90">
-                        <span>90%</span>
-                    </div>
-                </div>
-
-                <!-- Single Skills Item [ END ] -->
-
-                <div class="skill-container col-sm-3">
-                    <h3>Coding</h3>
-                    <div class="skill" data-percent="85">
-                        <span>85%</span>
-                    </div>
-                </div>
-
-                <div class="skill-container col-sm-3">
-                    <h3>Coding</h3>
-                    <div class="skill" data-percent="85">
-                        <span>85%</span>
-                    </div>
-                </div>
-
-                <!-- Single Skills Item [ END ] -->
-
             </div>
         </div>
+
 
         <!--( C ) Footer Section -->
 
@@ -508,332 +483,6 @@
 
         <!--( A ) Portfolio -->
 
-        <div class="portfolio">
-            <h2 class="small-heading">PORTFOLIO</h2>
-            <div class="project-container">
-
-                <div class="project-controls">
-                    <button class="filter" data-filter="all">All</button>
-                    <button class="filter" data-filter=".graphic-design">Graphic Design</button>
-                    <button class="filter" data-filter=".web-design">Web Designs</button>
-                    <button class="filter" data-filter=".app-development">App Development</button>
-                </div>
-
-                <!-- Portfolio Control Buttons [ END ] -->
-
-                <div class="projet-items clearfix" id="projects">
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix graphic-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_1.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-1" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-1">
-                        <img alt="" src="images/portfolio/image_1.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix web-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_2.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-2" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-2">
-                        <img alt="" src="images/portfolio/image_2.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix app-development">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_3.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-3" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-3">
-                        <img alt="" src="images/portfolio/image_3.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix graphic-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_4.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-4" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-4">
-                        <img alt="" src="images/portfolio/image_4.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix web-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_5.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-5" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-5">
-                        <img alt="" src="images/portfolio/image_5.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix app-development">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_6.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-6" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-6">
-                        <img alt="" src="images/portfolio/image_6.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix web-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_7.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-7" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-7">
-                        <img alt="" src="images/portfolio/image_7.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix graphic-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_8.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-8" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-8">
-                        <img alt="" src="images/portfolio/image_8.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix app-development">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_9.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-9" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-9">
-                        <img alt="" src="images/portfolio/image_9.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-
-
-                    <!-- Portfolio Image -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mix web-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/image_10.jpg" alt="">
-                            <div class="ovrly">
-                            </div>
-                            <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
-                                <a href="#portfolio-10" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Popup Content -->
-
-                    <div class="pop-up-box" id="portfolio-10">
-                        <img alt="" src="images/portfolio/image_10.jpg" class=" hidden-xs">
-                        <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
-                            <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
-                            </p>
-                            <a href="#">PREVIEW</a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Item [ END ] -->
-
-                </div>
-            </div>
-        </div>
 
         <!--( B ) Testimonials Section -->
 
@@ -987,21 +636,39 @@
         </div>
 
         <!--( C ) Google Map -->
+        <div class="row">
+            <div class="col-md-12">
+                <div style="height:450px; width:auto;" class="google-map" id="google-map"></div>
+            </div>
+        </div>
 
-        <div style="height:500px;" class="google-map" id="google-map"></div>
+
 
 
         <div class="contact-details  clearfix">
-            <div class="col-xs-12 social-media">
-
-                <a target="_blank" href="{{$basic_profile->linkedin_url}}" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
-                <a target="_blank" href="{{$basic_profile->github_url}}" class="fa fa-github" data-toggle="tooltip" title="Github"></a>
-                <a target="_blank" href="{{$basic_profile->googleplus_url}}" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
-                <a target="_blank" href="{{$basic_profile->quora_url}}" class="fa fa-quora" data-toggle="tooltip" title="Quora"></a>
-                <a target="_blank" href="{{$basic_profile->facebook_url}}" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
-                <a target="_blank" href="{{$basic_profile->insta_url}}" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
-
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-1 col-xs-4 social-media">
+                    <a target="_blank" href="{{$basic_profile->linkedin_url}}" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
+                </div>
+                <div class="col-md-1 col-xs-4 social-media">
+                    <a target="_blank" href="{{$basic_profile->github_url}}" class="fa fa-github" data-toggle="tooltip" title="Github"></a>
+                </div>
+                <div class="col-md-1 col-xs-4 social-media">
+                    <a target="_blank" href="{{$basic_profile->googleplus_url}}" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
+                </div>
+                <div class="col-md-1 col-xs-4 social-media">
+                    <a target="_blank" href="{{$basic_profile->quora_url}}" class="fa fa-quora" data-toggle="tooltip" title="Quora"></a>
+                </div>
+                <div class="col-md-1 col-xs-4 social-media">
+                    <a target="_blank" href="{{$basic_profile->facebook_url}}" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
+                </div>
+                <div class="col-md-1 col-xs-4 social-media">
+                    <a target="_blank" href="{{$basic_profile->insta_url}}" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
+                </div>
             </div>
+
+
         </div>
 
 
