@@ -1007,12 +1007,12 @@
         <div class="contact-details  clearfix">
             <div class="col-xs-12 social-media">
 
-                <a href="#" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
-                <a href="#" class="fa fa-github" data-toggle="tooltip" title="Github"></a>
-                <a href="#" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
-                <a href="#" class="fa fa-quora" data-toggle="tooltip" title="Quora"></a>
-                <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
-                <a href="#" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
+                <a target="_blank" href="{{$basic_profile->linkedin_url}}" class="fa fa-linkedin" data-toggle="tooltip" title="Linkedin"></a>
+                <a target="_blank" href="{{$basic_profile->github_url}}" class="fa fa-github" data-toggle="tooltip" title="Github"></a>
+                <a target="_blank" href="{{$basic_profile->googleplus_url}}" class="fa fa-plus" data-toggle="tooltip" title="Google+"></a>
+                <a target="_blank" href="{{$basic_profile->quora_url}}" class="fa fa-quora" data-toggle="tooltip" title="Quora"></a>
+                <a target="_blank" href="{{$basic_profile->facebook_url}}" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></a>
+                <a target="_blank" href="{{$basic_profile->insta_url}}" class="fa fa-instagram" data-toggle="tooltip" title="Instagram"></a>
 
             </div>
         </div>
