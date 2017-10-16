@@ -247,65 +247,25 @@
 
         <div class="services-container clearfix">
             <h2 class="small-heading">WHAT CAN I DO?</h2>
-            <div class="services col-lg-4 col-md-6 col-sm-4">
-                <i class="fa fa-eyedropper"></i>
-                <h3>GRAPHIC DESIGN</h3>
-                <p>
-                    Sed mi sem, sagi eros ac, laoreet commodo diam. Morbi id est in urna facilisis dictum. Mauris rutrum mollis neque a sodales. Mauris sed ipsum nec turpis finibus.
-                </p>
-            </div>
 
-            <!-- Single Service Item [ END ]  -->
+            @foreach($specializations as $specialization)
 
-            <div class="services col-lg-4 col-md-6 col-sm-4">
-                <i class="fa fa-eye"></i>
-                <h3>WEB DESIGN</h3>
-                <p>
-                    Vivamus et rhoncus mauris, suscipit efficitur elementum ex. Interdum et malesuada ipsum primis in faucibus. Nullam odio libero, cursus ac ligula suscipit maximus.
-                </p>
-            </div>
+                <div class="services col-lg-6 col-md-6 col-sm-4">
+                    <i class="{{$specialization->icon}}"></i>
+                    <h3>{{$specialization->title}}</h3>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <p>
+                                {{$specialization->description}}
+                            </p>
+                        </div>
+                    </div>
 
-            <!-- Single Service Item [ END ]  -->
+                </div>
 
-            <div class="services col-lg-4 col-md-6 col-sm-4">
-                <i class="fa fa-code"></i>
-                <h3>WEB DEVELOPMENT</h3>
-                <p>
-                    Praesent ac varius ante, eu suscipit odio. Vesmolito modo pretium scelerisque. Sed vulputate ac varius ante dapibus tempor. Maecenas ut cursus aug suscipit malesuada felis.
-                </p>
-            </div>
+            @endforeach
 
-            <!-- Single Service Item [ END ]  -->
 
-            <div class="services col-lg-4 col-md-6 col-sm-4">
-                <i class="fa fa-lightbulb-o"></i>
-                <h3>BRIGHT IDEAS</h3>
-                <p>
-                    Nunc egestas sed efficitur nulla a sodales. Pellentesque tincidunt diam quam, rhoncus congue pellentesque eu, faucibus nec turpis. Quisque laoreet tincidunt turpis dolor tempus.
-                </p>
-            </div>
-
-            <!-- Single Service Item [ END ]  -->
-
-            <div class="services col-lg-4 col-md-6 col-sm-4">
-                <i class="fa fa-rocket"></i>
-                <h3>APP DEVELOPMENT</h3>
-                <p>
-                    Vestibulum dictum tincidunt pulvinar elementum. Etiam urna massa, vestibulum id purus id, vehicula placerat dui. Aenean sit amet pulvinar urna. Ut at mi semper, eleifend.
-                </p>
-            </div>
-
-            <!-- Single Service Item [ END ]  -->
-
-            <div class="services col-lg-4 col-md-6 col-sm-4">
-                <i class="fa fa-wrench"></i>
-                <h3>SETTINGS</h3>
-                <p>
-                    Vestibulum tincidunt sed dapibus elit, sed accumsan libero. Nam vulputate tincidunt quam quis nibh porttitor, a tincidunt lacinia. Nulla turpis arcu, hendrerit volutpat tincidunt at, eget est.
-                </p>
-            </div>
-
-            <!-- Single Service Item [ END ]  -->
 
         </div>
 
