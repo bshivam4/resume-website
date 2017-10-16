@@ -265,8 +265,6 @@
 
             @endforeach
 
-
-
         </div>
 
         <!--( C ) Some Facts -->
@@ -289,7 +287,7 @@
         <!--( D ) Footer -->
 
         <div class="footer clearfix">
-            <a href="#">{{$basic_profile->first_name}} {{$basic_profile->last_name}}</a>
+            <a href="#">{{$basic_profile->first_name}}</a>
             <p>
                 Copyright © 2017 All right reserved
             </p>
@@ -329,7 +327,7 @@
                     <div class="item">
                         <div class="bullet hidden-xs">
                         </div>
-                        <div class="education-content">
+                        <div class="education-content clearfix">
                             <h3>{{$education->degree}}</h3>
 
                                 <p>
@@ -362,19 +360,48 @@
                     <div class="item">
                         <div class="bullet hidden-xs">
                         </div>
+
                         <div class="experience-content">
                             <h3>{{$experience->designation}}</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et pulvinar ligula. Praesent maximus ornare quam, id consectetur dui eleifend nec. Nam consectetur orci id nulla varius, quis facilisis dui vulputate. Sed ultrices eu erat non mollis. Phasellus ut libero.
-                            </p>
+
+                            <div>
+
+                                    <div class="exps col-lg-4 col-md-4 col-sm-4">
+                                        <i class="fa fa-building"></i>
+                                        <div class="row">
+                                            <div class="col-md-8 col-md-offset-2">
+                                                <p>
+                                                    {{$experience->organisation}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <div class="exps col-lg-4 col-md-4 col-sm-4">
+                                    <i class="fa fa-calendar"></i>
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <p>
+                                                {{$experience->from}} - {{$experience->to}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="exps col-lg-4 col-md-4 col-sm-4">
+                                    <i class="fa fa-code"></i>
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <p>
+                                                {{$experience->technology}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 @endforeach
-
-
-
-
 
             </div>
         </div>

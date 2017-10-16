@@ -670,6 +670,46 @@ body {
     color: #fff;
 }
 
+.exps {
+    text-align: center;
+    padding: 15px;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.exps:hover {
+    background: rgba( 255, 255, 255, 0.05);
+}
+
+.exps i {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15), 0 0 0 0 rgba(255, 255, 255, 0.3);
+    color: #00B6F9;
+    font-size: 36px;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    margin: 20px 0 10px 0;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.exps:hover i {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15), 0 0 0 40px rgba(255, 255, 255, 0);
+}
+.exps p,
+.exps h3 {
+    color: #fff;
+}
+
 /* ( c ) Some Facts */
 
 .facts {
