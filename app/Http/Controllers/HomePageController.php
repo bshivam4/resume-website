@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\BasicProfile;
 use App\Education;
 use App\Experience;
+use App\Project;
 use App\Skill;
 use App\Specialization;
 use Illuminate\Http\Request;
@@ -35,8 +36,8 @@ class HomePageController extends Controller
         }
         //return $skills;
 
+        $projects=Project::orderBy('serial')->get();
 
-
-        return view('home',compact('basic_profile','educations','experiences','specializations','skills'));
+        return view('home',compact('basic_profile','educations','experiences','specializations','skills','projects'));
     }
 }

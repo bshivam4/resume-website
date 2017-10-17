@@ -483,7 +483,7 @@
         <div class="testimonials clearfix">
             <h2 class="small-heading">PORTFOLIO</h2>
         </div>
-        <div class="portfolio">
+        <div class="portfolio ">
             <h2 class="small-heading"></h2>
             <div class="project-container">
 
@@ -491,35 +491,42 @@
 
 
                     <!-- Portfolio Image -->
+                    <div class="row">
+                    @foreach($projects as $project)
 
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6  graphic-design">
-                        <div class="project">
-                            <img src="images/portfolio/thumbs/flow_sports_life.jpg" alt="">
-                            <div class="ovrly">
+                            <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12  graphic-design">
+                                <div class="project">
+                                    <img height="300px" width="360px" src="images/portfolio/thumbs/{{$project->picture_path}}.jpg" alt="">
+                                    <div class="ovrly">
+                                    </div>
+                                    <div class="buttons">
+
+                                        <a href="#{{$project->id}}" class="fa fa-search show-popup"></a>
+                                    </div>
+                                </div>
+                                <div align="center">
+                                    <h3>{{$project->title}}</h3>
+                                </div>
+
                             </div>
-                            <div class="buttons">
 
-                                <a href="#portfolio-1" class="fa fa-search show-popup"></a>
-                            </div>
-                        </div>
-                        <div align="center">
-                            <h3>Flow Sports Life Mobile Application</h3>
-                        </div>
 
-                    </div>
+
 
 
                     <!-- Popup Content -->
 
-                    <div class="pop-up-box" id="portfolio-1" >
-                        <img alt="" src="images/portfolio/flow_sports_life.jpg" class=" hidden-xs">
+                    <div class="pop-up-box" id="{{$project->id}}" >
+                        <img alt="" src="images/portfolio/{{$project->picture_path}}.jpg" class=" hidden-xs">
                         <div class="popup-content">
-                            <h3>PROJECT NAME</h3>
+                            <h3>{{$project->title}}</h3>
                             <p>
                                 Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
                             </p>
                             <a href="#">PREVIEW</a>
                         </div>
+                    </div>
+                        @endforeach
                     </div>
 
 
@@ -533,64 +540,22 @@
 
         <!--( B ) Testimonials Section -->
 
-        <div class="testimonials clearfix">
-            <h2 class="small-heading">SOME WORDS FROM CLIENTS</h2>
-            <div class="testimonials-container col-sm-10 col-sm-offset-1">
-                <div class="owl-carousel">
-                    <div>
-                        <p>
-                            <i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper aliquet nulla, eget feugiat mi pellentesque sed. In neque erat, vulputate eu justo et, posuere scelerisque nulla.<i class="fa fa-quote-right"></i>
-                        </p>
-                        <h3>Justin Peterson</h3>
-                    </div>
 
-                    <!-- Single Testimonial Item [ END ] -->
-
-                    <div>
-                        <p>
-                            <i class="fa fa-quote-left"></i>Sed vulputate nibh id molestie efficitur. Maecenas cursus est a quam ullamcorper, eu iaculis ullamcorper. Maecenas pretium aliquet mi, tincidunt semper lectus rutrum et.<i class="fa fa-quote-right"></i>
-                        </p>
-                        <h3>Cristina Devis</h3>
-                    </div>
-
-                    <!-- Single Testimonial Item [ END ] -->
-
-                    <div>
-                        <p>
-                            <i class="fa fa-quote-left"></i>Ut tristique pellentesque arcu, in hendrerit urna rhoncus sed. Vivamus vel diam ex. Nunc nunc vitae lectus facilisis imperdiet. Proin pretium tempus dui, et vehicula purus.<i class="fa fa-quote-right"></i>
-                        </p>
-                        <h3>Jonny Watts</h3>
-                    </div>
-
-                    <!-- Single Testimonial Item [ END ] -->
-
-                    <div>
-                        <p>
-                            <i class="fa fa-quote-left"></i>Etiam sollicitudin ornare pulvinar. Nullam a vulputate lectus. Maecenas a nisl leo. Curabitur ante nisi, pellentesque et turpis eget, iaculis porta lorem. Aenean in justo nec turpis maximus.<i class="fa fa-quote-right"></i>
-                        </p>
-                        <h3>{{$basic_profile->first_name}} {{$basic_profile->last_name}}</h3>
-                    </div>
-
-                    <!-- Single Testimonial Item [ END ] -->
-
-                </div>
-            </div>
-        </div>
 
         <!--( C ) Some Facts -->
 
         <div class="facts clearfix">
             <div class="col-xs-4">
-                <h3>PROJECTS DONE</h3>
-                <h1>300+</h1>
+                <h3>YEARS ACTIVE</h3>
+                <h1>4+</h1>
             </div>
             <div class="col-xs-4">
-                <h3>HAPPY CLIENTS</h3>
-                <h1>100+</h1>
+                <h3>PROJECTS</h3>
+                <h1>10+</h1>
             </div>
             <div class="col-xs-4">
-                <h3>COFFEE CUPS</h3>
-                <h1>250+</h1>
+                <h3>SKILLS</h3>
+                <h1>25+</h1>
             </div>
         </div>
 
