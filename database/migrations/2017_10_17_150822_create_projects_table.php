@@ -18,7 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->mediumText('description')->nullable();
             $table->string('category')->nullable();
-            $table->string('technology')->nullable();
+            $table->mediumText('technology')->nullable();
             $table->string('from')->nullable();
             $table->string('to')->nullable();
             $table->string('organisation')->nullable();
