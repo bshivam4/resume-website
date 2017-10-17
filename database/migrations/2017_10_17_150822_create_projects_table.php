@@ -23,6 +23,7 @@ class CreateProjectsTable extends Migration
             $table->string('from')->nullable();
             $table->string('to')->nullable();
             $table->string('organisation')->nullable();
+            $table->string('picture_path')->nullable();
             $table->string('url')->nullable();
             $table->timestamps();
         });
