@@ -480,31 +480,39 @@
     <div class="content-container col-md-7 col-sm-12">
 
         <!--( A ) Portfolio -->
-
-        <div class="portfolio">
+        <div class="testimonials clearfix">
             <h2 class="small-heading">PORTFOLIO</h2>
+        </div>
+        <div class="portfolio">
+            <h2 class="small-heading"></h2>
             <div class="project-container">
 
                 <div class="projet-items clearfix" id="projects">
+
 
                     <!-- Portfolio Image -->
 
                     <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6  graphic-design">
                         <div class="project">
-                            <img src="images/portfolio/thumbs/image_1.jpg" alt="">
+                            <img src="images/portfolio/thumbs/flow_sports_life.jpg" alt="">
                             <div class="ovrly">
                             </div>
                             <div class="buttons">
-                                <a href="#" class="fa fa-link"></a>
+
                                 <a href="#portfolio-1" class="fa fa-search show-popup"></a>
                             </div>
                         </div>
+                        <div align="center">
+                            <h3>Flow Sports Life Mobile Application</h3>
+                        </div>
+
                     </div>
+
 
                     <!-- Popup Content -->
 
-                    <div class="pop-up-box" id="portfolio-1">
-                        <img alt="" src="images/portfolio/image_1.jpg" class=" hidden-xs">
+                    <div class="pop-up-box" id="portfolio-1" >
+                        <img alt="" src="images/portfolio/flow_sports_life.jpg" class=" hidden-xs">
                         <div class="popup-content">
                             <h3>PROJECT NAME</h3>
                             <p>
@@ -513,6 +521,10 @@
                             <a href="#">PREVIEW</a>
                         </div>
                     </div>
+
+
+
+
                 </div>
             </div>
         </div>
