@@ -135,7 +135,7 @@ $(document).ready(function () {
         $('.introduction, .menu').animate({
             left: 0
         }, 1000);
-        $('.profile-page, .resume-page, .portfolio-page, .contact-page').fadeOut(200);
+        $('.profile-page, .resume-page, .portfolio-page, .contact-page').fadeOut(800);
     });
     
     /*  --------------------------------
