@@ -15,6 +15,8 @@ class HomePageController extends Controller
 {
     public function index(){
         $basic_profile=BasicProfile::first();
+        $basic_profile->website_views_count+=1;
+        $basic_profile->save();
         $educations=Education::get();
         $experiences=Experience::orderBy('serial','desc')->get();
         $specializations=Specialization::orderBy('serial')->get();

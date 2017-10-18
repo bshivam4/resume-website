@@ -270,17 +270,21 @@
         <!--( C ) Some Facts -->
 
         <div class="facts clearfix">
-            <div class="col-xs-4">
+            <div class="col-xs-6 col-md-3">
                 <h3>YEARS ACTIVE</h3>
-                <h1>4+</h1>
+                <h1>{{$basic_profile->years_active_count}}+</h1>
             </div>
-            <div class="col-xs-4">
-                <h3>PROJECTS</h3>
-                <h1>10+</h1>
+            <div class="col-xs-6 col-md-3">
+                <h3>PROJECTS DONE</h3>
+                <h1>{{$basic_profile->projects_count}}+</h1>
             </div>
-            <div class="col-xs-4">
-                <h3>SKILLS</h3>
-                <h1>25+</h1>
+            <div class="col-xs-6  col-md-3">
+                <h3>TECHNICAL SKILLS</h3>
+                <h1>{{$basic_profile->skills_count}}+</h1>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <h3>WEBSITE VIEWS</h3>
+                <h1>{{$basic_profile->website_views_count}}+</h1>
             </div>
         </div>
 
@@ -549,17 +553,21 @@
         <!--( C ) Some Facts -->
 
         <div class="facts clearfix">
-            <div class="col-xs-4">
+            <div class="col-xs-6 col-md-3">
                 <h3>YEARS ACTIVE</h3>
-                <h1>4+</h1>
+                <h1>{{$basic_profile->years_active_count}}+</h1>
             </div>
-            <div class="col-xs-4">
-                <h3>PROJECTS</h3>
-                <h1>10+</h1>
+            <div class="col-xs-6 col-md-3">
+                <h3>PROJECTS DONE</h3>
+                <h1>{{$basic_profile->projects_count}}+</h1>
             </div>
-            <div class="col-xs-4">
-                <h3>SKILLS</h3>
-                <h1>25+</h1>
+            <div class="col-xs-6  col-md-3">
+                <h3>TECHNICAL SKILLS</h3>
+                <h1>{{$basic_profile->skills_count}}+</h1>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <h3>WEBSITE VIEWS</h3>
+                <h1>{{$basic_profile->website_views_count}}+</h1>
             </div>
         </div>
 
