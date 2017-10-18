@@ -142,13 +142,14 @@
             <img  alt="" src="images/menu/resume_btn.jpg">
             <div class="mask">
             </div>
-            <div class="heading col-xs-11 col-xs-offset-1">
-                <div class="col-xs-2 hidden-xs">
-                    <i class="fa fa-graduation-cap"></i>
-                </div>
+            <div class="heading col-xs-11 col-xs-offset-1"  align="right">
+
                 <div class="col-sm-10">
                     <h2>RE<span>S</span>UME</h2>
-                    <h3>Something about my experience and skills.</h3>
+                    <h3>About my experience and skills.</h3>
+                </div>
+                <div class="col-xs-2 hidden-xs">
+                    <i class="fa fa-graduation-cap"></i>
                 </div>
             </div>
         </div>
@@ -176,13 +177,14 @@
             <img alt="" src="images/menu/contact_btn.jpg">
             <div class="mask">
             </div>
-            <div class="heading col-xs-11 col-xs-offset-1">
-                <div class="col-xs-2 hidden-xs">
-                    <i class="fa fa-envelope-o"></i>
-                </div>
+            <div class="heading col-xs-11 col-xs-offset-1"  align="right">
+
                 <div class="col-sm-10">
                     <h2>CO<span>N</span>TACT</h2>
                     <h3>Say hello or find me.</h3>
+                </div>
+                <div class="col-xs-2 hidden-xs">
+                    <i class="fa fa-envelope-o"></i>
                 </div>
             </div>
         </div>
@@ -521,9 +523,11 @@
                         <div class="popup-content">
                             <h3>{{$project->title}}</h3>
                             <p>
-                                Quisque in tempor sapien, et cursus neque. Nunc pulvinar diam ac dapibus mollis. Etiam id iaculis lorem. Donec bibendum volutpat ante, eu consequat nisi suscipit at. Etiam interdum augue dolor, id auctor felis volutpat sed. Phasellus id ex ultrices, tempus leo eget, volutpat diam. In sit amet magna faucibus, molestie nisi in, hendrerit libero. Morbi auctor velit sagittis, elementum lorem eget, imperdiet nisl.
+                                {{$project->description}}
                             </p>
-                            <a href="#">PREVIEW</a>
+                            @if($project->url)
+                            <a href="{{$project->url}}">PREVIEW</a>
+                                @endif
                         </div>
                     </div>
                         @endforeach
